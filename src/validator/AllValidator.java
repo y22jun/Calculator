@@ -23,6 +23,7 @@ public class AllValidator implements Validator {
             validator.validate(input);
         }
     }
+
     public void validateAll(String input) {
         validate(input);
     }
