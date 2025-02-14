@@ -1,18 +1,18 @@
 package input;
 
-import validator.Validator;
+import validator.AllValidator;
 
 import java.util.Scanner;
 
 public class InputHandler {
 
     private final String input;
-    private final Validator validator;
+    private final AllValidator allValidator;
 
     public InputHandler() {
         this.input = new Scanner(System.in).nextLine();
-        this.validator = new Validator();
-        this.validator.validateNotEmpty(this.input);
+        this.allValidator = new AllValidator();
+        this.allValidator.validateAll(this.input);
     }
 
     public String getInput() {
