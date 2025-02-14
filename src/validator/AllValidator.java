@@ -13,8 +13,7 @@ public class AllValidator implements Validator {
                 new ConsecutiveSeparatorValidator(),
                 new SeparatorValidator(),
                 new EndOperatorValidator(),
-                new WhitespaceBeforeOperatorValidator(),
-                new DivideZeroValidator()
+                new WhitespaceBeforeOperatorValidator()
         );
     }
 
