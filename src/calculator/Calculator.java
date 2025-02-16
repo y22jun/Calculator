@@ -1,6 +1,5 @@
 package calculator;
 
-import input.InputHandler;
 import operator.AllOperator;
 import operator.Operator;
 import parser.OperatorParser;
