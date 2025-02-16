@@ -1,8 +1,8 @@
-import calculator.Calculator;
+import output.OutputHandler;
 
 public class Main {
     public static void main(String[] args) {
-        Calculator calculator = new Calculator();
-        calculator.calculate();
+        OutputHandler outputHandler = new OutputHandler();
+        outputHandler.startCalculator();
     }
 }

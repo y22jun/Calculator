@@ -10,13 +10,11 @@ import java.util.List;
 
 public class Calculator {
 
-    private final InputHandler inputHandler = new InputHandler();
     private final SeparatorParser separatorParser = new SeparatorParser();
     private final OperatorParser operatorParser = new OperatorParser();
     private final AllOperator allOperator = new AllOperator();
 
-    public void calculate() {
-        String input = inputHandler.getInput();
+    public CalculatorResult calculate(String input) {
         char operator = operatorParser.parserOperator(input);
         List<Double> numbers = separatorParser.parserSeparator(input);
         double result = numbers.get(0);
@@ -28,6 +26,6 @@ public class Calculator {
             result = checkOperator.result(result, currentNumber);
         }
 
-        System.out.println(result);
+        return new CalculatorResult(numbers, operator, result);
     }
 }
