@@ -7,15 +7,14 @@ import java.util.Scanner;
 public class InputHandler {
 
     private final String input;
-    private final AllValidator allValidator;
+    private final AllValidator allValidator = new AllValidator();
 
     public InputHandler() {
-        this.input = new Scanner(System.in).nextLine();
-        this.allValidator = new AllValidator();
-        this.allValidator.validateAll(this.input);
+        input = new Scanner(System.in).nextLine();
+        allValidator.validateAll(input);
     }
 
     public String getInput() {
-        return this.input;
+        return input;
     }
 }
