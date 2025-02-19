@@ -23,6 +23,6 @@ public class OutputHandler {
             finalPrint.append(" ").append(calculatorResult.operator()).append(" ").append(calculatorResult.numbers().get(i));
         }
 
-        System.out.println(finalPrint + " = " + calculatorResult.result());
+        System.out.println(finalPrint + " = " + String.format("%.1f", calculatorResult.result()));
     }
 }
