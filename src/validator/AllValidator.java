@@ -1,6 +1,5 @@
 package validator;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class AllValidator implements Validator {
