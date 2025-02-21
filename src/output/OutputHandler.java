@@ -2,11 +2,11 @@ package output;
 
 import calculator.Calculator;
 import calculator.CalculatorResult;
-import input.InputHandler;
+import input.Input;
 
 public class OutputHandler {
 
-    private final InputHandler inputHandler = new InputHandler();
+    private final Input inputHandler = new Input();
     private final Calculator calculator = new Calculator();
 
     public void startCalculator() {
