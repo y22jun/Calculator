@@ -1,6 +1,6 @@
 package validator;
 
-import check.CharacterCheck;
+import check.CharacterValidator;
 
 import static exception.ErrorMessage.CONSECUTIVE_SEPARATOR;
 
@@ -11,7 +11,7 @@ public class ConsecutiveSeparatorValidator implements Validator {
         for(int i = 0; i < input.length() - 1; i++) {
             char current = input.charAt(i);
             char next = input.charAt(i + 1);
-            if(CharacterCheck.isSeparator(current) && CharacterCheck.isSeparator(next)) {
+            if(CharacterValidator.isSeparator(current) && CharacterValidator.isSeparator(next)) {
                 throw new IllegalArgumentException(CONSECUTIVE_SEPARATOR.getMessage());
             }
         }

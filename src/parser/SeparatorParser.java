@@ -1,6 +1,6 @@
 package parser;
 
-import check.CharacterCheck;
+import check.CharacterValidator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,7 @@ public class SeparatorParser {
     }
 
     private void appendNumber(char current, StringBuilder number, List<Double> result) {
-        if(!CharacterCheck.isSeparator(current)) {
+        if(!CharacterValidator.isSeparator(current)) {
             number.append(current);
             return;
         }

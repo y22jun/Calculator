@@ -1,6 +1,6 @@
 package check;
 
-public class CharacterCheck {
+public class CharacterValidator {
     public static boolean isSeparator(char current) {
         return current == ':' || current == ',';
     }
