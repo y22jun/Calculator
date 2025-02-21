@@ -2,16 +2,13 @@ package output;
 
 import calculator.Calculator;
 import calculator.CalculatorResult;
-import input.Input;
 
 public class Output {
 
-    private final Input inputHandler = new Input();
     private final Calculator calculator = new Calculator();
 
-    public void startCalculator() {
-        String input = inputHandler.getInput();
-        CalculatorResult calculatorResult = calculator.calculate(input);
+    public void startCalculator(String userInput) {
+        CalculatorResult calculatorResult = calculator.calculate(userInput);
         printResult(calculatorResult);
     }
 
