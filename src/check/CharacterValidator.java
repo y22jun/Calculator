@@ -1,15 +1,9 @@
 package check;
 
-public class CharacterValidator {
-    public static boolean isSeparator(char current) {
-        return current == ':' || current == ',';
-    }
+public abstract class CharacterValidator {
+    public abstract boolean isSeparator(char current);
 
-    public static boolean isWhiteSpace(char current) {
-        return current == ' ';
-    }
+    public abstract boolean isWhiteSpace(char current);
 
-    public static boolean isOperator(char current) {
-        return current == '+' || current == '-' || current == '*' || current == '/';
-    }
+    public abstract boolean isOperator(char current);
 }
