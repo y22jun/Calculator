@@ -1,9 +1,9 @@
 package validator;
 
+import check.CharacterValidator;
 import check.CustomCharacterValidator;
 
-import static exception.ErrorMessage.CONSECUTIVE_SEPARATOR;
-import static exception.ErrorMessage.INPUT_EMPTY;
+import static exception.ErrorMessage.*;
 
 public class Validator {
 
@@ -21,6 +21,15 @@ public class Validator {
             char next = input.charAt(i + 1);
             if(customCharacterValidator.isSeparator(current) && customCharacterValidator.isSeparator(next)) {
                 throw new IllegalArgumentException(CONSECUTIVE_SEPARATOR.getMessage());
+            }
+        }
+    }
+
+    private void SeparatorValidate(String input) {
+        for(int i = 0; i < input.length() - 2; i++) {
+            char current = input.charAt(i);
+            if(!Character.isDigit(current) && !customCharacterValidator.isSeparator(current) && !customCharacterValidator.isWhiteSpace(current)) {
+                throw new IllegalArgumentException(INVALID_SEPARATOR.getMessage());
             }
         }
     }
