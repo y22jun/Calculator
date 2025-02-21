@@ -1,7 +1,6 @@
 package output;
 
 import calculator.Calculator;
-import calculator.CalculatorResult;
 
 public class Output {
 
