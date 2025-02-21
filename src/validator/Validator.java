@@ -1,6 +1,5 @@
 package validator;
 
-import check.CharacterValidator;
 import check.CustomCharacterValidator;
 
 import static exception.ErrorMessage.*;
