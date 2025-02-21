@@ -1,15 +1,17 @@
 package input;
 
+import validator.Validator;
+
 import java.util.Scanner;
 
 public class Input {
 
     private final String input;
-    private final AllValidator allValidator = new AllValidator();
 
     public Input() {
         input = new Scanner(System.in).nextLine();
-        allValidator.validateAll(input);
+        Validator validator = new Validator();
+        validator.AllValidate(input);
     }
 
     public String getInput() {
