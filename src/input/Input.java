@@ -6,12 +6,21 @@ import java.util.Scanner;
 
 public class Input {
 
-    private final String input;
+    private String input;
+    private final Scanner scanner = new Scanner(System.in);
+    private final Validator validator = new Validator();
 
-    public Input() {
-        input = new Scanner(System.in).nextLine();
-        Validator validator = new Validator();
+    private void readInput() {
+        input = scanner.nextLine();
+    }
+
+    private void validateInput() {
         validator.AllValidate(input);
+    }
+
+    public void processInput() {
+        readInput();
+        validateInput();
     }
 
     public String getInput() {
