@@ -9,6 +9,14 @@ public class Validator {
 
     private final CustomCharacterValidator customCharacterValidator = new CustomCharacterValidator();
 
+    public void AllValidate(String input) {
+        NotEmptyValidate(input);
+        ConsecutiveSeparatorValidate(input);
+        SeparatorValidate(input);
+        EndOperatorValidate(input);
+        WhitespaceBeforeOperatorValidate(input);
+    }
+
     private void NotEmptyValidate(String input) {
         if(input == null || input.isEmpty()) {
             throw new IllegalArgumentException(INPUT_EMPTY.getMessage());
