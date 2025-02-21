@@ -4,7 +4,7 @@ import calculator.Calculator;
 import calculator.CalculatorResult;
 import input.Input;
 
-public class OutputHandler {
+public class Output {
 
     private final Input inputHandler = new Input();
     private final Calculator calculator = new Calculator();
