@@ -33,4 +33,11 @@ public class Validator {
             }
         }
     }
+
+    private void EndOperatorValidate(String input) {
+        char current = input.charAt(input.length() - 1);
+        if(!customCharacterValidator.isOperator(current)) {
+            throw new IllegalArgumentException(INVALID_OPERATE.getMessage());
+        }
+    }
 }
