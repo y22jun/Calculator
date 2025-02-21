@@ -1,7 +1,5 @@
 package input;
 
-import validator.AllValidator;
-
 import java.util.Scanner;
 
 public class Input {
