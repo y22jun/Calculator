@@ -40,4 +40,11 @@ public class Validator {
             throw new IllegalArgumentException(INVALID_OPERATE.getMessage());
         }
     }
+
+    private void WhitespaceBeforeOperatorValidate(String input) {
+        char current = input.charAt(input.length() - 2);
+        if(!customCharacterValidator.isWhiteSpace(current)) {
+            throw new IllegalArgumentException(MISSING_WHITESPACE_BEFORE_OPERATOR.getMessage());
+        }
+    }
 }
